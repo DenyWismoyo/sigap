@@ -1,0 +1,5 @@
+# apphosting.yaml
+runConfig:
+  cpu: 1
+  memoryMiB: 1024
+  concurrency: 80

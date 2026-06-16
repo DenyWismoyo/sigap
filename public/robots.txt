@@ -1,0 +1,19 @@
+Allow all user agents access
+
+User-agent: *
+
+Allow crawling of the root and all public paths
+
+Allow: /
+
+Disallow crawling of the dashboard area
+
+Disallow: /dashboard/
+
+Disallow crawling of the login page
+
+Disallow: /login/
+
+Specify the location of the sitemap (replace with your actual domain)
+
+Sitemap: [URL_APLIKASI_ANDA]/sitemap.xml

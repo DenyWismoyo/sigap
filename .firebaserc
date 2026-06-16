@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "default": "wsmy-lab"
+  },
+  "targets": {
+    "wsmy-lab": {
+      "hosting": {
+        "sigap-opd": [
+          "sigap-opd"
+        ]
+      },
+      "firestore": {
+        "siyap-db-target": [
+          "database-siyap"
+        ]
+      }
+    }
+  }
+}

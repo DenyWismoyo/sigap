@@ -1,0 +1,220 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- PREAMBLE UNIVERSAL ---
+% Mengatur margin halaman
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+% Menggunakan font modern (Noto)
+\usepackage{fontspec}
+
+% Mengatur bahasa dokumen ke Bahasa Indonesia
+\usepackage[indonesian, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{indonesian}
+\babelprovide[import, onchar=ids fonts]{english}
+
+% Mengatur font default ke Noto Sans (Sans Serif) di slot 'rm' (roman/utama)
+\babelfont{rm}{Noto Sans}
+\babelfont[indonesian]{rm}{Noto Sans}
+% (Tidak perlu font CJK karena bahasa Indonesia menggunakan alfabet Latin)
+
+% Paket untuk tabel yang lebih baik
+\usepackage{booktabs}
+\usepackage{longtable} % Untuk tabel yang bisa terbagi antar halaman
+\usepackage{array}     % Untuk kustomisasi kolom tabel
+\usepackage{amssymb}   % Untuk simbol checkmark (\checkmark)
+
+% Paket lain
+\usepackage{hyperref}  % Untuk link (selalu di akhir)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Penawaran Aplikasi SIGAP},
+    pdfpagemode=FullScreen,
+}
+\usepackage{graphicx} % Untuk placeholder logo (jika diperlukan)
+\usepackage{tabularx} % Untuk tabel dengan lebar kolom yang rata
+
+% Mendefinisikan kolom 'L' untuk rata kiri di tabularx
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% Mengatur ulang gaya section agar tidak bernomor
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries}}
+\makeatother
+
+% --- JUDUL DOKUMEN ---
+% PERBAIKAN: Mengganti \n dengan \\ untuk line break di dalam title
+\title{
+    DOKUMEN PENAWARAN \\
+    \vspace{0.5em}
+    \LARGE Rencana Anggaran Biaya (RAB) \\
+    \vspace{0.25em}
+    \Large Aplikasi E-Office \& Produktivitas Terintegrasi "SIGAP"
+}
+\author{PT. SOLUSI INTEGRASI DIGITAL (Placeholder)}
+\date{\today}
+
+% --- ISI DOKUMEN ---
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} % Hapus nomor halaman di halaman judul
+
+\newpage
+\pagenumbering{arabic} % Mulai penomoran dari halaman ini
+
+\section*{A. Model Penawaran: Aplikasi sebagai Layanan (SaaS)}
+
+Kami menawarkan SIGAP sebagai solusi \textit{Software as a Service} (SaaS) yang dikelola penuh. Model ini memberikan keuntungan bagi instansi:
+\begin{itemize}
+    \item \textbf{Tanpa Biaya Server:} Instansi tidak perlu membeli atau memelihara server fisik. Aplikasi berjalan di infrastruktur cloud (Firebase) yang aman dan skalabel.
+    \item \textbf{Pembaruan Berkelanjutan:} Instansi akan selalu mendapatkan fitur terbaru, perbaikan keamanan, dan peningkatan performa secara otomatis.
+    \item \textbf{Dukungan Teknis:} Tim kami menyediakan dukungan teknis untuk memastikan aplikasi berjalan lancar.
+    \item \textbf{Skalabilitas:} Penambahan pengguna dapat dilakukan dengan mudah seiring pertumbuhan instansi.
+\end{itemize}
+
+\vspace{1em}
+
+\section*{B. Struktur Paket Layanan}
+Kami menawarkan tiga paket utama yang dirancang untuk memenuhi kebutuhan instansi dengan skala dan kompleksitas yang berbeda.
+
+% Menggunakan tabularx untuk tabel fitur agar rapi
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{@{} L c c c @{}}
+\toprule
+\textbf{Fitur} & \textbf{Paket Dasar (Core)} & \textbf{Paket Profesional (Advanced)} & \textbf{Paket Enterprise (Premium)} \\
+\midrule
+\textbf{Manajemen Surat \& Disposisi} & \checkmark & \checkmark & \checkmark \\
+\textbf{Manajemen Tugas \& Delegasi} & \checkmark & \checkmark & \checkmark \\
+\textbf{Logbook Kinerja Harian} & \checkmark & \checkmark & \checkmark \\
+\textbf{Jadwal \& Agenda Rapat} & \checkmark & \checkmark & \checkmark \\
+\textbf{Repository Dokumen \& Arsip} & \checkmark & \checkmark & \checkmark \\
+\textbf{Checklist \& Portal Pribadi} & \checkmark & \checkmark & \checkmark \\
+\textbf{Notulensi \& Pengumuman} & \checkmark & \checkmark & \checkmark \\
+\midrule
+\textit{--- Fitur Profesional ---} & & & \\
+\textbf{Manajemen Aset \& Inventaris} & -- & \checkmark & \checkmark \\
+\textbf{Persetujuan Draf Internal} & -- & \checkmark & \checkmark \\
+\textbf{Form Builder (Kuesioner)} & -- & \checkmark & \checkmark \\
+\midrule
+\textit{--- Fitur Enterprise ---} & & & \\
+\textbf{AI Surat Reader (Otomatisasi)} & -- & -- & \checkmark \\
+\textbf{AI Notulensi (Rangkuman)} & -- & -- & \checkmark \\
+\textbf{Modul Analitika \& Evaluasi} & -- & -- & \checkmark \\
+\textbf{Integrasi API Eksternal} & -- & -- & \checkmark \\
+\textbf{Dukungan Prioritas} & -- & -- & \checkmark \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+\section*{C. Estimasi Rencana Anggaran Biaya (RAB)}
+
+Berikut adalah estimasi rincian biaya untuk implementasi dan langganan aplikasi SIGAP. Harga bersifat \textit{estimasi} dan dapat dinegosiasikan berdasarkan jumlah pengguna dan kebutuhan kustomisasi.
+
+\subsection*{1. Biaya Implementasi (Satu Kali Bayar)}
+Biaya ini mencakup penyiapan awal, kustomisasi minor (branding \& logo), migrasi data master (struktur OPD \& Jabatan), dan konfigurasi awal.
+
+% Menggunakan longtable untuk RAB
+\begin{longtable}{@{} p{5cm} c c r r @{}}
+\toprule
+\textbf{Uraian Pekerjaan} & \textbf{Volume} & \textbf{Satuan} & \textbf{Harga Satuan (Rp)} & \textbf{Jumlah (Rp)} \\
+\midrule
+\endhead % Header untuk halaman selanjutnya
+\bottomrule
+\endfoot % Footer untuk halaman selanjutnya (jika perlu)
+
+1. Jasa Kustomisasi \& Setup Awal & 1 & Paket & 10.000.000 & 10.000.000 \\
+2. Migrasi Data Master (OPD, Jabatan) & 1 & Paket & 3.000.000 & 3.000.000 \\
+3. Branding Aplikasi (Logo \& Tema) & 1 & Paket & 2.000.000 & 2.000.000 \\
+\midrule
+\textbf{Sub-Total Implementasi} & & & & \textbf{15.000.000} \\
+\end{longtable}
+
+
+\subsection*{2. Biaya Langganan \& Pemeliharaan (Per Tahun)}
+Biaya ini mencakup penggunaan aplikasi, biaya infrastruktur cloud (Firebase), pemeliharaan rutin, pembaruan keamanan, dan dukungan teknis standar. Biaya dihitung per pengguna aktif per bulan dan ditagihkan setiap tahun.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{} l r @{}}
+\toprule
+\textbf{Paket} & \textbf{Estimasi Harga / Pengguna / Bulan (Rp)} \\
+\midrule
+\textbf{Paket Dasar} & 30.000 \\
+\textbf{Paket Profesional} & 50.000 \\
+\textbf{Paket Enterprise} & 80.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{1em}
+\textbf{Contoh Skenario (Simulasi):}
+\begin{itemize}
+    \item \textbf{Instansi A (Skala Kecil)}
+    \begin{itemize}
+        \item Kebutuhan: 50 Pengguna, Paket Profesional
+        \item Biaya Langganan Tahunan: 50 pengguna $\times$ Rp 50.000 $\times$ 12 bulan = \textbf{Rp 30.000.000 / Tahun}
+    \end{itemize}
+    \vspace{0.5em}
+    \item \textbf{Instansi B (Skala Besar)}
+    \begin{itemize}
+        \item Kebutuhan: 200 Pengguna, Paket Enterprise (termasuk AI)
+        \item Biaya Langganan Tahunan: 200 pengguna $\times$ Rp 80.000 $\times$ 12 bulan = \textbf{Rp 192.000.000 / Tahun}
+    \end{itemize}
+\end{itemize}
+
+
+\subsection*{3. Biaya Pelatihan \& Pendampingan (Opsional)}
+Kami menyediakan pelatihan di tempat (on-site) atau daring (online) untuk Admin dan pengguna akhir.
+
+\begin{longtable}{@{} p{5cm} c c r r @{}}
+\toprule
+\textbf{Uraian Pekerjaan} & \textbf{Volume} & \textbf{Satuan} & \textbf{Harga Satuan (Rp)} & \textbf{Jumlah (Rp)} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+1. Pelatihan Admin (2 Sesi) & 1 & Paket & 3.000.000 & 3.000.000 \\
+2. Pelatihan Pengguna Akhir (4 Sesi) & 1 & Paket & 5.000.000 & 5.000.000 \\
+\midrule
+\textbf{Sub-Total Pelatihan (Opsional)} & & & & \textbf{8.000.000} \\
+\end{longtable}
+
+\vspace{1em}
+\section*{D. Ringkasan Estimasi Total Biaya Tahun Pertama}
+(Menggunakan Skenario Instansi A: 50 Pengguna, Paket Profesional, dengan Pelatihan)
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{} l r @{}}
+\toprule
+\textbf{Uraian} & \textbf{Jumlah Biaya (Rp)} \\
+\midrule
+1. Biaya Implementasi (Satu Kali) & 15.000.000 \\
+2. Biaya Langganan Tahun Pertama (50 Pengguna $\times$ Rp 50.000 $\times$ 12 Bulan) & 30.000.000 \\
+3. Biaya Pelatihan \& Pendampingan & 8.000.000 \\
+\midrule
+\textbf{Estimasi Total Biaya Tahun Pertama} & \textbf{53.000.000} \\
+\textit{Biaya Tahun Berikutnya (Langganan)} & \textit{30.000.000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{2em}
+\begin{center}
+--- Akhir Dokumen Penawaran ---
+\end{center}
+
+\end{document}
+

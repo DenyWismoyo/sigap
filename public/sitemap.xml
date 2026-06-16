@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage URL (replace with your actual domain) -->
+  <url>
+    <loc>https://disposisi-opd.web.app</loc>
+    <lastmod>2025-10-26</lastmod> <!-- Update this date regularly or use dynamic generation -->
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Add other public URLs here if needed -->
+  <!-- Example:
+  <url>
+    <loc>[URL_APLIKASI_ANDA]/fitur</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+   -->
+</urlset>

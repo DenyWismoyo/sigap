@@ -1,0 +1,79 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "jabatan",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "opdId", "order": "ASCENDING" },
+        { "fieldPath": "pltUserId", "order": "ASCENDING" },
+        { "fieldPath": "pltMulaiTanggal", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "surat",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "opdId", "order": "ASCENDING" },
+        { "fieldPath": "tanggalDiterima", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "surat",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "jenisSurat", "order": "ASCENDING" },
+        { "fieldPath": "reminderSent", "order": "ASCENDING" },
+        { "fieldPath": "detailAgenda.tanggal", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "surat",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "jenisSurat", "order": "ASCENDING" },
+        { "fieldPath": "statusPenyelesaian", "order": "ASCENDING" },
+        { "fieldPath": "detailAgenda.tanggal", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "tugas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "kepadaJabatanId", "order": "ASCENDING" },
+        { "fieldPath": "tanggalDibuat", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "tugas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "tanggalSelesai", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "disposisi",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "suratId", "order": "ASCENDING" },
+        { "fieldPath": "tanggalDisposisi", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "disposisi",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "dikembalikanPada", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notifications",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "userId", "order": "ASCENDING" },
+        { "fieldPath": "timestamp", "order": "DESCENDING" }
+      ]
+    }
+  ]
+}

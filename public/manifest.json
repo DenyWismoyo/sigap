@@ -1,0 +1,31 @@
+{
+  "name": "SIGAP",
+  "short_name": "SIGAP",
+  "description": "Sistem Integrasi & Administrasi Persuratan",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "share_target": {
+    "action": "/dashboard/surat/upload",
+    "method": "GET",
+    "params": {
+      "title": "perihal",
+      "text": "tambahan_perihal"
+    }
+  }
+}
