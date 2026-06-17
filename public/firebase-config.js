@@ -1,11 +1,11 @@
 // PENTING: File ini berisi nilai asli dari .env.local Anda.
 // File ini HANYA untuk di-load oleh service worker (firebase-messaging-sw.js)
 const firebaseConfig = {
-  apiKey: "AIzaSyCcEu3gundRXCHZjAuS1Yqi-lv5fyYQNNI",
-  authDomain: "disposisi-opd.firebaseapp.com",
-  projectId: "disposisi-opd",
-  storageBucket: "disposisi-opd.firebasestorage.app",
-  messagingSenderId: "466461681806",
-  appId: "1:466461681806:web:de6520cffe174fdf8301df",
-  measurementId: "G-T15CM146PS"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
